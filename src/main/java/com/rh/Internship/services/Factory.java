@@ -1,4 +1,4 @@
-package com.rh.Internship;
+package com.rh.Internship.services;
 
 import com.rh.Internship.services.MessageService;
 import com.rh.Internship.services.MessageServiceEn;
