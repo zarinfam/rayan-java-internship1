@@ -1,6 +1,7 @@
 package com.rh.Internship;
 
 import com.rh.Internship.services.MessageService;
+import com.rh.Internship.services.MessageServiceSp;
 
 import javax.swing.*;
 
@@ -9,7 +10,7 @@ import javax.swing.*;
  */
 public class MainGui {
 
-    private static MessageService messageService = Factory.getMessageService();
+    private static MessageService messageService = Factory.getMessageServiceDesktop();
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
