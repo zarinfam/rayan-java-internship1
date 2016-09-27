@@ -4,7 +4,7 @@ package com.rh.Internship.employee;
  * @author Saeed Zarinfam
  */
 public class SalariedEmployee extends Employee {
-\
+
     private long monthlySalary;
 
     public SalariedEmployee(String name, String code, long monthlySalary) {
