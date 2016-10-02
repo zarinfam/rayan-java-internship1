@@ -1,9 +1,4 @@
-package com.rh.Internship.services;
-
-import com.rh.Internship.services.MessageService;
-import com.rh.Internship.services.MessageServiceEn;
-import com.rh.Internship.services.MessageServiceFa;
-import com.rh.Internship.services.MessageServiceSp;
+package com.rh.Internship.hello.services;
 
 /**
  * @author Saeed Zarinfam
