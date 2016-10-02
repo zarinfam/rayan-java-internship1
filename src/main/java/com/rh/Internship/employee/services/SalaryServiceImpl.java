@@ -16,12 +16,4 @@ public class SalaryServiceImpl implements SalaryService{
         return employee.calculateSalary();
     }
 
-    @Override
-    public Map<String, Float> calculateBatchSalary(List<Employee> employeeList) {
-        Map<String, Float> salaryResult = new HashMap<>();
-
-        employeeList.forEach(employee -> salaryResult.put(employee.getCode(), calculateSalary(employee)));
-
-        return salaryResult;
-    }
 }
