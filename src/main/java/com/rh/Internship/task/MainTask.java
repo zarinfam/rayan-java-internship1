@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class MainTask {
     // JDBC database URL
-    static final String DB_URL = "jdbc:mysql://localhost:3306/new_schema?characterEncoding=UTF-8&useSSL=false";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/task_db?characterEncoding=UTF-8&useSSL=false";
 
     // Database credentials
     static final String USER = "test";
@@ -20,7 +20,7 @@ public class MainTask {
     public static void main(String[] args) {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
             try (Statement stmt = conn.createStatement()) {
-                String sql = "SELECT * FROM new_table";
+                String sql = "SELECT * FROM task";
                 ResultSet rs = stmt.executeQuery(sql);
                 //STEP 3: Extract data from result set
                 while (rs.next()) {
