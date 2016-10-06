@@ -1,7 +1,7 @@
-package com.rh.Internship.hello;
+package com.rh.internship.hello;
 
-import com.rh.Internship.hello.services.Factory;
-import com.rh.Internship.hello.services.MessageService;
+import com.rh.internship.hello.services.Factory;
+import com.rh.internship.hello.services.MessageService;
 
 /**
  * @author Saeed Zarinfam

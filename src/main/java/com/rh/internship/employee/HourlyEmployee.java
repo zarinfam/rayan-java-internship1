@@ -1,4 +1,4 @@
-package com.rh.Internship.employee;
+package com.rh.internship.employee;
 
 /**
  * @author Saeed Zarinfam

@@ -1,6 +1,6 @@
-package com.rh.Internship.task.Daos;
+package com.rh.internship.task.daos;
 
-import com.rh.Internship.task.models.User;
+import com.rh.internship.task.models.User;
 
 import java.util.List;
 import java.util.Optional;

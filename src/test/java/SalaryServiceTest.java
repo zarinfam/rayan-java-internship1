@@ -1,8 +1,8 @@
-import com.rh.Internship.employee.Employee;
-import com.rh.Internship.employee.HourlyEmployee;
-import com.rh.Internship.employee.SalariedEmployee;
-import com.rh.Internship.employee.services.SalaryService;
-import com.rh.Internship.employee.services.SalaryServiceFactory;
+import com.rh.internship.employee.Employee;
+import com.rh.internship.employee.HourlyEmployee;
+import com.rh.internship.employee.SalariedEmployee;
+import com.rh.internship.employee.services.SalaryService;
+import com.rh.internship.employee.services.SalaryServiceFactory;
 import org.junit.Test;
 
 import java.util.Arrays;

@@ -1,5 +1,5 @@
-import com.rh.Internship.hello.services.MessageService;
-import com.rh.Internship.hello.services.MessageServiceFa;
+import com.rh.internship.hello.services.MessageService;
+import com.rh.internship.hello.services.MessageServiceFa;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;

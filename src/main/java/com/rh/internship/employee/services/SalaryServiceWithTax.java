@@ -1,7 +1,7 @@
-package com.rh.Internship.employee.services;
+package com.rh.internship.employee.services;
 
-import com.rh.Internship.employee.Employee;
-import com.rh.Internship.employee.SalariedEmployee;
+import com.rh.internship.employee.Employee;
+import com.rh.internship.employee.SalariedEmployee;
 
 /**
  * @author Saeed Zarinfam

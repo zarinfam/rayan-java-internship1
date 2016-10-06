@@ -16,6 +16,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.39</version>
@@ -39,7 +45,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.rh.Internship.hello.MainCmd</mainClass>
+                    <mainClass>com.rh.internship.hello.MainCmd</mainClass>
                 </configuration>
             </plugin>
 

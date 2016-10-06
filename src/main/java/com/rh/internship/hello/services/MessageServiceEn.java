@@ -1,4 +1,4 @@
-package com.rh.Internship.hello.services;
+package com.rh.internship.hello.services;
 
 /**
  * @author Saeed Zarinfam

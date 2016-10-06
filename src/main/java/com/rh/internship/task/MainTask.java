@@ -1,10 +1,6 @@
-package com.rh.Internship.task;
+package com.rh.internship.task;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
 
 /**
  * @author Saeed Zarinfam

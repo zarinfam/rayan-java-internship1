@@ -1,6 +1,6 @@
-package com.rh.Internship.employee.services;
+package com.rh.internship.employee.services;
 
-import com.rh.Internship.employee.Employee;
+import com.rh.internship.employee.Employee;
 
 import java.util.HashMap;
 import java.util.List;

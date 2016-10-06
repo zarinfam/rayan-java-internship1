@@ -1,6 +1,8 @@
-package com.rh.Internship.task.services;
+package com.rh.internship.task.services;
 
-import com.rh.Internship.task.models.User;
+import com.rh.internship.task.daos.DaoFactory;
+import com.rh.internship.task.daos.UserDao;
+import com.rh.internship.task.models.User;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,6 +11,9 @@ import java.util.Optional;
  * @author Saeed Zarinfam
  */
 public class UserServiceImpl implements UserService {
+
+    private UserDao userDao = DaoFactory.getUserDao();
+
     @Override
     public Optional<User> createUser(User user) {
         return null;
@@ -16,6 +21,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getAllUser() {
-        return null;
+        return userDao.selectAllUser();
     }
 }

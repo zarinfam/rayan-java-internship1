@@ -1,4 +1,4 @@
-package com.rh.Internship.task.models;
+package com.rh.internship.task.models;
 
 /**
  * @author Saeed Zarinfam

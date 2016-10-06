@@ -1,5 +1,5 @@
-import com.rh.Internship.hello.services.Factory;
-import com.rh.Internship.hello.services.MessageService;
+import com.rh.internship.hello.services.Factory;
+import com.rh.internship.hello.services.MessageService;
 import org.junit.Test;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
