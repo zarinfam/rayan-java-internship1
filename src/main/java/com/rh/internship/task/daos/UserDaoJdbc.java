@@ -10,7 +10,7 @@ import java.util.Optional;
 /**
  * @author Saeed Zarinfam
  */
-public class UserDaoJdbc extends GeneralDao implements UserDao {
+public class UserDaoJdbc extends GeneralDaoJdbc implements UserDao {
 
     @Override
     public Optional<User> insertUser(User user) {
@@ -44,6 +44,6 @@ public class UserDaoJdbc extends GeneralDao implements UserDao {
             }
 
             return userList;
-        }).orElseGet(() -> new ArrayList<>());
+        }).orElseGet(ArrayList::new);
     }
 }

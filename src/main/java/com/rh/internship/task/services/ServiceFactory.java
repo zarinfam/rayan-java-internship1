@@ -1,15 +1,17 @@
 package com.rh.internship.task.services;
 
-import com.rh.internship.task.daos.UserDao;
-import com.rh.internship.task.daos.UserDaoJdbc;
-
 /**
  * @author Saeed Zarinfam
  */
 public class ServiceFactory {
     private static UserService userService = new UserServiceImpl();
+    private static TaskService taskService = new TaskServiceImp();
 
     public static UserService getUserService() {
         return userService;
+    }
+
+    public static TaskService getTaskService() {
+        return taskService;
     }
 }
