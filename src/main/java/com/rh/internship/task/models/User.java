@@ -1,17 +1,33 @@
 package com.rh.internship.task.models;
 
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * @author Saeed Zarinfam
  */
+@Entity
+@Table(name = "user")
 public class User {
+
+    @Id
+    @GeneratedValue
     private long id;
+
     private String name;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<Task> taskList;
+
+    public User() {
+    }
 
     public User(long id, String name) {
         this.id = id;
+        this.name = name;
+    }
+
+    public User(String name) {
         this.name = name;
     }
 

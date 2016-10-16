@@ -1,13 +1,30 @@
 package com.rh.internship.task.models;
 
+import javax.persistence.*;
+
 /**
  * @author Saeed Zarinfam
  */
+@Entity
+@Table(name = "task")
 public class Task {
+    @Id
+    @GeneratedValue
     private long id;
     private String title;
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
+
+    public Task() {
+    }
+
+    public Task(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
 
     public Task(long id, String title, String description, User user) {
         this.id = id;
