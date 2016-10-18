@@ -3,6 +3,8 @@ import com.rh.internship.employee.HourlyEmployee;
 import com.rh.internship.employee.SalariedEmployee;
 import com.rh.internship.employee.services.SalaryService;
 import com.rh.internship.employee.services.SalaryServiceFactory;
+import com.rh.internship.task.daos.DaoFactory;
+import com.rh.internship.task.daos.UserDao;
 import com.rh.internship.task.models.User;
 import com.rh.internship.task.services.ServiceFactory;
 import com.rh.internship.task.services.UserService;
@@ -28,6 +30,7 @@ import static org.junit.Assert.assertThat;
 public class UserServiceTest {
 
     private static UserService userService = ServiceFactory.getUserService();
+    private static UserDao userDao = DaoFactory.getUserDao();
 
     @Test
     public void getAllUsers_getAllUsersFromDao_returnAllUsers() {
@@ -43,5 +46,19 @@ public class UserServiceTest {
 
     }
 
+    @Test
+    public void createUser_createUserUsingService_createdUserInDB() {
+        User createdUser = new User("test-create");
+        userService.createUser(createdUser);
 
+        List<User> allUser = userDao.selectAllUser();
+        assertThat(allUser.size(), equalTo(5));
+
+        assertThat(allUser.stream().map(user -> user.getName()).collect(Collectors.toList())
+                , containsInAnyOrder("Sara", "Sam", "Ali", "Naghi", "test-create"));
+
+        //cleanup db
+        userDao.deleteUser(createdUser.getId());
+
+    }
 }

@@ -16,9 +16,12 @@ public class GeneralDaoJdbc {
     static final String PASS = "p";
 
     public <T> Optional<T> runQuery(Function<Statement, T> queryBlock){
+
+        Optional<T> ret = Optional.empty();
+
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
             try (Statement stmt = conn.createStatement()) {
-                return Optional.ofNullable(queryBlock.apply(stmt));
+                ret = Optional.ofNullable(queryBlock.apply(stmt));
             }
         } catch (SQLException se) {
             //Handle errors for JDBC
@@ -28,7 +31,7 @@ public class GeneralDaoJdbc {
             e.printStackTrace();
         }
 
-        return Optional.empty();
+        return ret;
     }
 
     public <T> Optional<T> runQuery(Function<PreparedStatement, T> codeBlock, String query){
