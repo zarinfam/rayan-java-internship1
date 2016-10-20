@@ -10,6 +10,6 @@ import java.util.List;
  */
 public interface TaskService {
     List<Task> getAllTask(long userId);
-    List<Task> findTaskByUser(String titlePart);
-    void addTasksForUser(List<Task> tasks, User user);
+    List<Task> findTaskByUser(User user, String titlePart);
+    void addTasksForUser(List<Task> tasks, long userId);
 }

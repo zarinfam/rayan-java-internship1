@@ -46,4 +46,9 @@ public class UserDaoJdbc extends GeneralDaoJdbc implements UserDao {
             return userList;
         }).orElseGet(ArrayList::new);
     }
+
+    @Override
+    public Optional<User> getUser(long userId) {
+        return null;
+    }
 }

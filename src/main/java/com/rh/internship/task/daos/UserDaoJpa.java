@@ -39,4 +39,9 @@ public class UserDaoJpa extends GeneralDaoJpa implements UserDao {
         return runJpaCode(em -> em.createQuery("select u from User u").getResultList()
                 , false).orElseGet(ArrayList::new);
     }
+
+    @Override
+    public Optional<User> getUser(long userId) {
+        return runJpaCode(em -> em.find(User.class, userId) , false);
+    }
 }

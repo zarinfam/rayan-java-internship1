@@ -5,7 +5,7 @@ package com.rh.internship.task.daos;
  */
 public class DaoFactory {
     private static UserDao userDao = new UserDaoJpa();
-    private static TaskDao taskDao = new TaskDaoJdbc();
+    private static TaskDao taskDao = new TaskDaoJpa();
 
     public static UserDao getUserDao(){
         return userDao;

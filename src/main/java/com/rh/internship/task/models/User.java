@@ -1,6 +1,7 @@
 package com.rh.internship.task.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,8 +17,8 @@ public class User {
 
     private String name;
 
-    @OneToMany(mappedBy = "user")
-    private List<Task> taskList;
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    private List<Task> taskList = new ArrayList<>();
 
     public User() {
     }

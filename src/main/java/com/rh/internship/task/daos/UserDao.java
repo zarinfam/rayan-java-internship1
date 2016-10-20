@@ -13,4 +13,5 @@ public interface UserDao {
     Optional<User> updateUser(User user);
     boolean deleteUser(long userId);
     List<User> selectAllUser();
+    Optional<User> getUser(long userId);
 }
